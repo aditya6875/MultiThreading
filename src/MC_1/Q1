@@ -1,0 +1,1 @@
+Write a program to create a thread by extending the Thread class and another one by implementing the Runnable interface.

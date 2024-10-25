@@ -1,0 +1,16 @@
+Difference between wait() and sleep() and code implementation.
+
+Wait
+----------------------
+It is used for inter-thread communication.
+A thread calls wait() to release its monitor lick and give other thread a chance to execute.
+A thread in the wait() state can be resumed only by calling notify() or notifyAll()
+on the same object.
+java.lang.Object
+
+
+Sleep:
+----------------------
+Primarily used to pause the current thread for a specified time
+java.lang.Thread
+Does not need to be called in a synchronized block because it does not release the lock.
