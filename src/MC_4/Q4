@@ -1,0 +1,3 @@
+Write a Java program to create a fixed thread pool using ExecutorService and submit multiple tasks.
+
+ExecutorService interface provides a way to manage a pool of threads efficiently
