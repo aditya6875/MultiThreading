@@ -1,0 +1,39 @@
+Implement a Singleton pattern that is thread-safe using synchronized or double-checked locking.
+
+What is Singleton pattern?
+----------------------------------------------------------------
+Singleton pattern is a design pattern that ensures a class has only one instance and provides a global
+point of access to that instance.
+This is helpful when exactly one object is needed to coordinate actions accross a system
+
+Example of Singleton pattern
+----------------------------------------------------------------
+Configuration Manager
+Logging class
+Connection pool
+
+
+================================================================
+Implemenation Explanation
+
+Volatile Keyword: The volatile keyword ensures that changes to the instance variable are visible
+to all threads. This prevents subtle issues with instruction reordering,
+ensuring instance is correctly initialized before any thread accesses it.
+
+Double-Checked Locking:
+
+The first if (instance == null) check is done without locking to improve performance by
+avoiding unnecessary synchronization after the instance is created.
+
+The synchronized block is entered only if instance is null.
+
+Inside the synchronized block, there’s a second if (instance == null) check to confirm
+that the instance hasn’t been initialized by another thread that might have reached
+this block simultaneously.
+
+
+// USAGE
+
+To get Singleton Instace, you can call by:
+
+Singleton singletonInstance = Singleton.getInstance();
